@@ -11,7 +11,7 @@ class ApiServices {
 
     if (response.statusCode == 200) {
       final json = jsonDecode(response.body);
-      final List<dynamic> items = json['items'] ?? []; // Ensure items is a list
+      final List<dynamic> items = json['category'] ?? []; // Ensure items is a list
       return items.map((item) => Product.fromJson(item)).toList();
     } else {
       throw Exception('Failed to load products');

@@ -9,6 +9,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: const [Icon(Icons.qr_code_scanner_sharp)],
+        backgroundColor: Colors.purple,
+        leading: const Icon(Icons.menu),
         title: const Text('Products Details'),
       ),
       body: FutureBuilder<List<Product>>(
